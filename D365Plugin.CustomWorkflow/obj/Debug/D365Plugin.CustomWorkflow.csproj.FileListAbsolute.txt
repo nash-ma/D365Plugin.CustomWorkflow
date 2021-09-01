@@ -1,0 +1,13 @@
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\bin\Debug\D365Plugin.CustomWorkflow.dll
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\bin\Debug\D365Plugin.CustomWorkflow.pdb
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\bin\Debug\Microsoft.Xrm.Sdk.Workflow.dll
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\bin\Debug\Microsoft.Xrm.Sdk.xml
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\bin\Debug\Microsoft.Xrm.Sdk.Workflow.xml
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\obj\Debug\D365Plugin.CustomWorkflow.csprojAssemblyReference.cache
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\obj\Debug\D365Plugin.CustomWorkflow.csproj.CoreCompileInputs.cache
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\obj\Debug\D365Plugin.CustomWorkflow.csproj.CopyComplete
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\obj\Debug\D365Plugin.CustomWorkflow.dll
+C:\Users\ycma\source\repos\D365Plugin.CustomWorkflow\D365Plugin.CustomWorkflow\obj\Debug\D365Plugin.CustomWorkflow.pdb
