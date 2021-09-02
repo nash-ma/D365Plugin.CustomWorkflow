@@ -49,17 +49,21 @@ namespace D365Plugin.CustomWorkflow
                 Entity entity = (Entity)workflowContext.InputParameters["Target"];
                 // エンティティロジック名の取得
                 String entityName = entity.LogicalName;
+                // DBエンティティデータの取得
+                Entity DbEntity = service.Retrieve(entityName, entity.Id, new ColumnSet(true));
+                // トレースログを出力
+                tracingService.Trace("DBエンティティデータの取得が完了");
 
                 // 入力内容のチェック(ターゲットエンティティに含まれているか)
-                if (!entity.Attributes.Contains(stringInput))
+                if (!DbEntity.Attributes.Contains(stringInput))
                     throw new Exception("入力内容がエンティティに含まれていないので、再確認してください！");
 
                 // 入力内容のチェック(入力内容が設定されているか)
-                if (entity.GetAttributeValue<EntityReference>(stringInput) == null || entity.GetAttributeValue<EntityReference>(stringInput).Id == new Guid())
+                if (DbEntity.GetAttributeValue<EntityReference>(stringInput) == null || DbEntity.GetAttributeValue<EntityReference>(stringInput).Id == new Guid())
                     throw new Exception("入力内容が設定されていないので、再確認してください！");
 
                 // 検索項目GUID
-                Guid LookupGuid = entity.GetAttributeValue<EntityReference>(stringInput).Id;
+                Guid LookupGuid = DbEntity.GetAttributeValue<EntityReference>(stringInput).Id;
 
                 // 検索処理を行う
                 tracingService.Trace("検索処理を行う");
