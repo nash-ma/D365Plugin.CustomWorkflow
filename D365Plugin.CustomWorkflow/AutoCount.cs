@@ -18,11 +18,11 @@ namespace D365Plugin.CustomWorkflow
         // 入力
         [RequiredArgument]
         [Default("pas_class")]
-        [Input("String input")]
+        [Input("入力内容：検索項目名")]
         public InArgument<string> StringInput { get; set; }
 
         // 出力
-        [Output("Integer output")]
+        [Output("出力内容：件数")]
         public OutArgument<decimal> TargetCountOutput { get; set; }
 
         protected override void Execute(CodeActivityContext context)
@@ -43,11 +43,13 @@ namespace D365Plugin.CustomWorkflow
                 // 入力内容の取得
                 string stringInput = StringInput.Get<string>(context);
                 // トレースログを出力
-                tracingService.Trace($"入力内容：{stringInput}");
+                tracingService.Trace($"入力内容項目名：{stringInput}");
+
                 // ターゲットエンティティを取得
                 Entity entity = (Entity)workflowContext.InputParameters["Target"];
                 // エンティティロジック名の取得
                 String entityName = entity.LogicalName;
+
                 // 入力内容のチェック(ターゲットエンティティに含まれているか)
                 if (!entity.Attributes.Contains(stringInput))
                     throw new Exception("入力内容がエンティティに含まれていないので、再確認してください！");
@@ -55,6 +57,9 @@ namespace D365Plugin.CustomWorkflow
                 // 入力内容のチェック(入力内容が設定されているか)
                 if (entity.GetAttributeValue<EntityReference>(stringInput) == null || entity.GetAttributeValue<EntityReference>(stringInput).Id == new Guid())
                     throw new Exception("入力内容が設定されていないので、再確認してください！");
+
+                // 検索項目GUID
+                Guid LookupGuid = entity.GetAttributeValue<EntityReference>(stringInput).Id;
 
                 // 検索処理を行う
                 tracingService.Trace("検索処理を行う");
@@ -66,7 +71,7 @@ namespace D365Plugin.CustomWorkflow
                 // フィルター列
                 query.Attributes.AddRange($"{stringInput}");
                 // 列の値
-                query.Values.AddRange(new object[] { entity.Id });
+                query.Values.AddRange(new object[] { LookupGuid });
 
                 // 検索を行う
                 RetrieveMultipleRequest request = new RetrieveMultipleRequest();
