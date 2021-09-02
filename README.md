@@ -47,7 +47,28 @@ Dynamics365 ユーザー定義ワークフロー活動の作成(Create a custom 
   - ステップ２：クラスの項目「学生人数」を更新する。
 
 ## ■結果
-補充入り
+- 〇プラグインの登録：
+![プラグインの登録](D365Plugin.CustomWorkflow/image/プラグイン登録001.png "プラグインの登録")
+
+- 〇ワークフローの作成：
+![WF001](D365Plugin.CustomWorkflow/image/WF001.png "WF001")
+![WF002](D365Plugin.CustomWorkflow/image/WF002.png "WF002")
+![WF003](D365Plugin.CustomWorkflow/image/WF003.png "WF003")
+
+- 〇学生作成時の前後：
+![作成前001](D365Plugin.CustomWorkflow/image/作成前001.png "作成前001")
+![作成前002](D365Plugin.CustomWorkflow/image/作成前002.png "作成前002")
+![作成中001](D365Plugin.CustomWorkflow/image/作成中001.png "作成中001")
+![作成後001](D365Plugin.CustomWorkflow/image/作成後001.png "作成後001")
+![作成後002](D365Plugin.CustomWorkflow/image/作成後002.png "作成後002")
+
+- 〇学生のクラス変更時の前後：
+![変更前_A](D365Plugin.CustomWorkflow/image/変更前_A.png "変更前_A")
+![変更前_B](D365Plugin.CustomWorkflow/image/変更前_B.png "変更前_B")
+![変更A⇒B](D365Plugin.CustomWorkflow/image/変更A⇒B.png "変更A⇒B")
+![変更後_A](D365Plugin.CustomWorkflow/image/変更後_A.png "変更後_A")
+![変更後_B](D365Plugin.CustomWorkflow/image/変更後_B.png "変更後_B")
+
 
 #### ■参考：
 ・[チュートリアル: ワークフロー拡張の作成](https://docs.microsoft.com/ja-jp/powerapps/developer/data-platform/workflow/tutorial-create-workflow-extension) <br>
