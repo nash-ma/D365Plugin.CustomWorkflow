@@ -77,5 +77,21 @@
     <None Include="D365Plugin.CustomWorkflow.snk" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\WF001.png" />
+    <Content Include="image\WF002.png" />
+    <Content Include="image\WF003.png" />
+    <Content Include="image\プラグイン登録001.png" />
+    <Content Include="image\作成中001.png" />
+    <Content Include="image\作成前001.png" />
+    <Content Include="image\作成前002.png" />
+    <Content Include="image\作成後001.png" />
+    <Content Include="image\作成後002.png" />
+    <Content Include="image\変更A⇒B.png" />
+    <Content Include="image\変更前_A.png" />
+    <Content Include="image\変更前_B.png" />
+    <Content Include="image\変更後_A.png" />
+    <Content Include="image\変更後_B.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
